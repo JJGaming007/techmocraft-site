@@ -1,15 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
   return (
     <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center">
       {/* Logo: place your logo image in /public/logo.png */}
       <Link href="/">
-        <img
-          src="/logo.png"
-          alt="Company Logo"
-          className="h-8 w-auto"
-        />
+        <Image src="/logo.png" alt="Logo" width={120} height={40} />
       </Link>
 
       {/* Navigation Links */}

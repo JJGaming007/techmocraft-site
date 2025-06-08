@@ -10,7 +10,7 @@ export default function ContactPage() {
       <div className="relative max-w-2xl mx-auto bg-white shadow-xl rounded-lg p-10 border border-gray-200">
         <h1 className="text-4xl font-bold text-center mb-2">Contact Us</h1>
         <p className="text-center text-gray-500 mb-8">
-          Let's talk about how Techmocraft Engineering can help your business.
+          Let&apos;s talk about how Techmocraft Engineering can help your business.
         </p>
         <form
           action="https://formsubmit.co/techmocraft7@gmail.com"
