@@ -3,9 +3,10 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
+// ✅ Combined metadata correctly
 export const metadata = {
   title: "Techmocraft Engineering",
-  description: "Precision engineering services.",
+  description: "High-quality die making, repairing, milling and plastic molding services.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
