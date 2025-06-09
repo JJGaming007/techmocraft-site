@@ -15,13 +15,16 @@ export const metadata = {
 export default function ServicesPage() {
   return (
     <section className="p-8 max-w-6xl mx-auto">
-      <h1 className="text-4xl font-extrabold text-center mb-10">Our Services</h1>
+      <h1 className="text-4xl font-extrabold text-center mb-10 text-gray-900 dark:text-white">Our Services</h1>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
         {services.map((service, index) => (
-          <div key={index} className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition">
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm hover:shadow-md transition"
+          >
             <service.icon className="h-8 w-8 text-blue-600 mb-4" />
-            <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
-            <p className="text-gray-600">{service.desc}</p>
+            <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{service.title}</h2>
+            <p className="text-gray-600 dark:text-gray-300">{service.desc}</p>
           </div>
         ))}
       </div>

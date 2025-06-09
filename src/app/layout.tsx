@@ -5,15 +5,15 @@ import "./globals.css";
 
 export const metadata = {
   title: "Techmocraft Engineering",
-  description: "Precision engineering services — die making, repairing, milling, and molding.",
+  description: "Precision engineering services — die making, repairing, milling, and molding."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen bg-gray-50 text-gray-800 font-sans">
+    <html lang="en" className="dark">
+      <body className="flex flex-col min-h-screen bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
         <Navbar />
-        <main className="flex-grow px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-br from-white to-gray-100">
+        <main className="flex-grow px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
           {children}
         </main>
         <Footer />
