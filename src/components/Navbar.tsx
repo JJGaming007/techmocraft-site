@@ -19,10 +19,10 @@ export function Navbar() {
 
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-8">
-      <div className="w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3">
-        {/* Logo aligned left with padding */}
+      <div className="flex justify-between items-center w-full py-3">
+        {/* Logo - left aligned */}
         <Link href="/" className="flex-shrink-0">
-          <div className="relative w-[180px] h-[70px]">
+          <div className="relative w-[140px] h-[50px] sm:w-[180px] sm:h-[70px]">
             <Image
               src="/logo-darkmode-bgwhite.png"
               alt="Techmocraft Logo"
@@ -40,7 +40,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6 items-center text-sm font-semibold">
           {navLinks.map((item) => {
             const isActive = pathname === item.href;
