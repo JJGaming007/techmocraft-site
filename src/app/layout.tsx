@@ -5,7 +5,13 @@ import "./globals.css";
 
 export const metadata = {
   title: "Techmocraft Engineering",
-  description: "Precision engineering services — die making, repairing, milling, and molding."
+  description: "Precision engineering services.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
