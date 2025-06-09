@@ -15,25 +15,32 @@ export default function HomePage() {
 
   return (
     <div className="space-y-24">
-      {/* Hero Section */}
+      {/* Parallax Banner with hero text */}
       <motion.section
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center py-24 px-4 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800"
+        viewport={{ once: true, amount: 0.2 }}
+        className="relative h-[60vh] sm:h-[75vh] w-full overflow-hidden rounded-xl shadow-xl"
       >
-        <h1 className="text-5xl font-bold mb-4 text-gray-800 dark:text-white">
-          Welcome to Techmocraft Engineering
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-8">
-          Delivering precision and performance in every tool we craft. Your reliable partner in die manufacturing and industrial solutions.
-        </p>
-        <Link href="/services">
-          <span className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition">
-            Explore Services
-          </span>
-        </Link>
+        <div
+          className="absolute inset-0 z-0 bg-fixed bg-center bg-cover bg-no-repeat"
+          style={{ backgroundImage: "url('/banner.jpg')" }}
+        ></div>
+        <div className="absolute inset-0 bg-black/40 dark:bg-black/60 z-10" />
+        <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6 text-white">
+          <h1 className="text-4xl sm:text-5xl font-bold drop-shadow-lg mb-4">
+            Welcome to Techmocraft Engineering
+          </h1>
+          <p className="text-lg max-w-2xl mb-6 text-white/90">
+            Delivering precision and performance in every tool we craft. Your reliable partner in die manufacturing and industrial solutions.
+          </p>
+          <Link href="/services">
+            <span className="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition">
+              Explore Services
+            </span>
+          </Link>
+        </div>
       </motion.section>
 
       {/* About Section */}
@@ -46,7 +53,7 @@ export default function HomePage() {
       >
         <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">About Us</h2>
         <p className="text-gray-600 dark:text-gray-300 text-lg">
-          Techmocraft Engineering is dedicated to excellence in die making, CNC milling, and plastic molding. Our commitment to quality, innovation, and reliability drives everything we do. [You can edit this section to reflect your real story.]
+          Techmocraft Engineering is dedicated to excellence in die making, CNC milling, and plastic molding. Our commitment to quality, innovation, and reliability drives everything we do.
         </p>
       </motion.section>
 
