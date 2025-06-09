@@ -6,13 +6,12 @@ import "./globals.css";
 // ✅ Combined metadata correctly
 export const metadata = {
   title: "Techmocraft Engineering",
-  description: "High-quality die making, repairing, milling and plastic molding services.",
+  description: "Precision engineering services.",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
+    icon: "/favicon.ico",         // browser tab
+    shortcut: "/favicon.ico",     // browser shortcuts
+    apple: "/apple-touch-icon.png" // optional
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
