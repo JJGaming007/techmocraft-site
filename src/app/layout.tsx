@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // ✅ Combined metadata correctly
 export const metadata = {
