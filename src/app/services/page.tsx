@@ -58,7 +58,7 @@ export default function ServicesPage() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
           >
-            Our <span className="bg-gradient-to-r from-primary-600 to-blue-500 bg-clip-text text-transparent">Services</span>
+            Our <span className="bg-gradient-to-r from-primary-600 to-blue-500 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent">Services</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

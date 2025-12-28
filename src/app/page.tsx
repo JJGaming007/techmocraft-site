@@ -56,7 +56,7 @@ export default function HomePage() {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-2xl mb-6 leading-tight">
               Welcome to{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400 dark:from-blue-300 dark:via-blue-200 dark:to-blue-400 bg-clip-text text-transparent">
                 Techmocraft Engineering
               </span>
             </h1>
