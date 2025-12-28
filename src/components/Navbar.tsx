@@ -18,10 +18,10 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center w-full py-3">
         {/* Logo - left aligned */}
-        <Link href="/" className="flex-shrink-0">
+        <Link href="/" className="flex-shrink-0 hover:opacity-80 transition-opacity">
           <div className="relative w-[140px] h-[50px] sm:w-[180px] sm:h-[70px]">
             <Image
               src="/logo-darkmode-bgwhite.png"
@@ -41,24 +41,26 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 items-center text-sm font-semibold">
+        <div className="hidden md:flex space-x-8 items-center text-sm font-semibold">
           {navLinks.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative transition-colors duration-200 group ${
+                className={`relative transition-all duration-200 group py-1 ${
                   isActive
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-primary-600 dark:text-primary-400"
+                    : "text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400"
                 }`}
               >
-                <span className="inline-block pb-1">
+                <span className="inline-block">
                   {item.name}
                   <span
-                    className={`block h-0.5 transition-all duration-300 ${
-                      isActive ? "w-full bg-blue-500" : "w-0 group-hover:w-full bg-blue-500"
+                    className={`block h-0.5 mt-1 rounded-full transition-all duration-300 ${
+                      isActive
+                        ? "w-full bg-gradient-to-r from-primary-600 to-blue-500"
+                        : "w-0 group-hover:w-full bg-gradient-to-r from-primary-600 to-blue-500"
                     }`}
                   ></span>
                 </span>
@@ -69,7 +71,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 dark:text-gray-300"
+          className="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -79,17 +81,17 @@ export function Navbar() {
 
       {/* Mobile Nav Items */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col space-y-3 px-2 text-sm font-medium">
+        <div className="md:hidden pb-4 flex flex-col space-y-2 px-2 text-sm font-medium border-t border-gray-200 dark:border-gray-700 pt-4 mt-2">
           {navLinks.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors ${
+                className={`py-2 px-4 rounded-lg transition-all ${
                   isActive
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400"
+                    ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
+                    : "text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
