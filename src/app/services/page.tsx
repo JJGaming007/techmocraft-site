@@ -125,7 +125,7 @@ export default function ServicesPage() {
             Contact us today to discuss your project requirements and discover how Techmocraft Engineering can bring precision and excellence to your manufacturing needs.
           </p>
           <Link href="/contact">
-            <span className="inline-flex items-center gap-2 bg-white text-primary-700 dark:text-primary-800 hover:bg-gray-100 dark:hover:bg-gray-50 font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span className="inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-gray-50 font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               Contact Us Now
               <ArrowRight className="w-5 h-5" />
             </span>
