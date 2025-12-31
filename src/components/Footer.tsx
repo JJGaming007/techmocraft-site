@@ -1,6 +1,7 @@
 // src/components/Footer.tsx
 
 import Link from "next/link";
+import { Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
@@ -54,11 +55,67 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} Techmocraft Engineering. All rights reserved.
-          </p>
+        {/* Social Media & Bottom Bar */}
+        <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              &copy; {new Date().getFullYear()} Techmocraft Engineering. All rights reserved.
+            </p>
+
+            {/* Social Media Links */}
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-600 dark:text-gray-400">Follow us:</span>
+              <div className="flex gap-3">
+                {/* Add actual social media URLs when available */}
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all duration-300"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all duration-300"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all duration-300"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all duration-300"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

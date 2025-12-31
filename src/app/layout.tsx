@@ -2,6 +2,9 @@ import { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { BackToTop } from "@/components/BackToTop";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import "./globals.css";
 
 // Comprehensive SEO metadata
@@ -71,9 +74,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-custom-grid bg-repeat bg-top text-gray-800 dark:text-gray-100">
         <Navbar />
         <main className="flex-grow px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
+          <Breadcrumb />
           {children}
         </main>
         <Footer />
+        <BackToTop />
+        <WhatsAppButton />
       </body>
     </html>
   );
